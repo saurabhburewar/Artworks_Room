@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QwertyPencils</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- <div id="subtitles">
+        <div class="sub_text" id="sub_tr">Traditional</div>
+        <div class="sub_text" id="sub_dg">Digital</div>
+        <div class="sub_text" id="sub_wd">Web Design</div>
+        <div class="sub_text" id="sub_3d">3D Design</div>
+    </div> -->
+    <div class="house" id="h">
+        <div class="wall1">
+            <div class="w1_front"></div>
+            <div class="w1_side"></div>
+            <div class="w1_top"></div>
+            <div class="w1_led"></div>
+            <div class="w1_light"></div>
+            <div class="w1_light1"></div>
+            <div id="trad_text">Traditional</div>
+        </div>
+        <div class="wall2">
+            <div class="w2_front"></div>
+            <div class="w2_side"></div>
+            <div class="w2_top"></div>
+            <div class="w2_led"></div>
+            <div class="w2_light"></div>
+            <div class="w2_light1"></div>
+            <div id="web_text">Web Design</div>
+        </div>
+        <div class="beam1">
+            <div class="b1_top"></div>
+            <div class="b1_bottom"></div>
+            <div class="b1_front"></div>
+            <div class="b1_side"></div>
+        </div>
+        <div class="beam2">
+            <div class="b2_top"></div>
+            <div class="b2_bottom"></div>
+            <div class="b2_front"></div>
+            <div class="b2_side"></div>
+        </div>
+        <div class="wall3">
+            <div class="w3_front"></div>
+            <div class="w3_side"></div>
+            <div class="w3_top"></div>
+        </div>
+        <div class="wall4">
+            <div class="w4_front"></div>
+            <div class="w4_side"></div>
+            <div class="w4_top"></div>
+        </div>
+        <div class="floor">
+            <div class="floor_light"></div>
+            <div class="floor_shadows1"></div>
+            <div class="floor_shadows2"></div>
+            <div class="floor_pink_light"></div>
+            <div class="floor_blue_light"></div>
+            <div id="threed_text">3D Design</div>
+        </div>
+        <div class="sidetiles1">
+            <div class="st1_front"></div>
+            <div class="st1_top"></div>
+        </div>
+        <div class="sidetiles2">
+            <div class="st2_front"></div>
+            <div class="st2_top"></div>
+        </div>
+        <div class="door">
+            <div class="door_light"></div>
+            <div class="door_pink_light"></div>
+        </div>
+        <div class="doorframe">
+            <div class="door_shadow"></div>
+            <div class="df_left">
+                <div class="df_side"></div>
+                <div class="df_front"></div>
+                <div class="df_light"></div>
+            </div>
+            <div class="df_right">
+                <div class="df_side">
+                    <div class="df_side_light"></div>
+                </div>
+                <div class="df_front">
+                    <div class="df_front_light"></div>
+                </div>
+            </div>
+            <div class="df_top">
+                <div class="df_top_side">
+                    <div class="df_top_side_light"></div>
+                </div>
+                <div class="df_top_front">
+                    <div class="df_top_front_light"></div>
+                </div>
+                <div class="df_top_top"></div>
+            </div>
+        </div>
+        <div class="frame1" id="hover_frame">
+            <div class="f_shadow"></div>
+            <div class="f_side"></div>
+            <div class="f_top"></div>
+            <div class="f_photo f1_art"></div>
+            <div class="f_overlay"></div>
+            <div class="f_light"></div>
+        </div>
+        <div class="frame2">
+            <div class="f_shadow"></div>
+            <div class="f_side"></div>
+            <div class="f_top"></div>
+            <div class="f_photo f2_art"></div>
+            <div class="f_overlay"></div>
+            <div class="f_light"></div>
+        </div>
+        <div class="bed">
+            <div class="headrest">
+                <div class="hr_shadow"></div>
+                <div class="hr_top">
+                    <div class="hr_top_light"></div>
+                </div>
+                <div class="hr_side">
+                    <div class="hr_side_light"></div>
+                </div>
+                <div class="hr_front">
+                    <div class="hr_front_light"></div>
+                </div>
+                <div class="hr_front_box"></div>
+            </div>
+            <div class="bed_side">
+                <div class="bed_side_box"></div>
+                <div class="bed_side_light"></div>
+            </div>
+            <div class="bed_front">
+                <div class="bed_front_box"></div>
+                <div class="bed_front_light"></div>
+            </div>
+            <div class="bed_top"></div>
+            <div class="bed_mattress">
+                <div class="mat_top">
+                    <div class="mat_top_light"></div>
+                    <div id="digi_text">Digital</div>
+                </div>
+                <div class="mat_front"></div>
+                <div class="mat_side"></div>
+            </div>
+            <div class="tablet" id="hover_tab">
+                <div class="tab_back"></div>
+                <div class="tab_front">
+                    <div class="tab_screen">
+                        <div class="tab_screen_on"></div>
+                        <div id="tab_light1"></div>
+                    </div>
+                </div>
+                <div class="tab_wire1"></div>
+                <div class="tab_wire2"></div>
+                <div class="tab_wire3"></div>
+                <div class="tab_wire4"></div>
+            </div>
+        </div>
+        <div class="night_stand">
+            <div class="ns_front">
+                <div class="ns_drawer"></div>
+                <div class="ns_front_light"></div>
+            </div>
+            <div class="ns_top">
+                <div class="ns_top_light"></div>
+            </div>
+            <div class="ns_side">
+                <div class="ns_side_light"></div>
+            </div>
+        </div>
+        <div class="table_area">
+            <div class="table_shadow"></div>
+            <div class="table_shadow1"></div>
+            <div class="table_top">
+                <div class="table_top_top">
+                    <div class="table_light"></div>
+                    <div class="table_blue_light"></div>
+                    <div class="table_blue_light1"></div>
+                    <div class="moniter_area" id="monitor">
+                        <div class="moniter_shadow"></div>
+                        <div class="moniter_body">
+                            <div class="mb_top"></div>
+                            <div class="mb_side"></div>
+                            <div class="mb_front"></div>
+                            <div class="mb_display" id="monitor_screen"></div>
+                        </div>
+                        <div class="moniter_stand">
+                            <div class="ms_vert">
+                                <div class="ms_vert_side"></div>
+                            </div>
+                            <div class="ms_base">
+                                <div class="ms_base_top">
+                                    <div class="ms_base_top_light"></div>
+                                </div>
+                                <div class="ms_base_side"></div>
+                                <div class="ms_base_front"></div>
+                                <div class="ms_base_shadow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="laptop_area" id="laptop">
+                        <div class="lap_shadow"></div>
+                        <div class="lap_base">
+                            <div class="lb_top">
+                                <div class="lb_keyboard"></div>
+                                <div class="lb_light"></div>
+                            </div>
+                            <div class="lb_front"></div>
+                            <div class="lb_side"></div>
+                        </div>
+                        <div class="lap_lid">
+                            <div class="ll_display" id="laptop_screen">
+                                <div id="ll_light1"></div>
+                            </div>
+                            <div class="ll_hinge_1"></div>
+                            <div class="ll_hinge_2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table_top_side"></div>
+                <div class="table_top_front"></div>
+            </div>
+            <div class="table_leg tl_left">
+                <div class="tl_stand_up">
+                    <div class="tl_stand_top_left"></div>
+                    <div class="tl_stand_side_left"></div>
+                    <div class="tl_stand_front_left"></div>
+                </div>
+                <div class="tl_stand_down">
+                    <div class="tl_stand_top_left"></div>
+                    <div class="tl_stand_side_left"></div>
+                    <div class="tl_stand_front_left"></div>
+                </div>
+                <div class="tl_stand_vert">
+                    <div class="tl_stand_vert_front_left"></div>
+                    <div class="tl_stand_vert_side_left"></div>
+                </div>
+            </div>
+            <div class="table_leg tl_right">
+                <div class="tl_stand_up">
+                    <div class="tl_stand_top_right"></div>
+                    <div class="tl_stand_side_right"></div>
+                    <div class="tl_stand_front_right"></div>
+                </div>
+                <div class="tl_stand_down">
+                    <div class="tl_stand_top_right"></div>
+                    <div class="tl_stand_side_right"></div>
+                    <div class="tl_stand_front_right"></div>
+                </div>
+                <div class="tl_stand_vert">
+                    <div class="tl_stand_vert_front_right"></div>
+                    <div class="tl_stand_vert_side_right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shelf sh1">
+            <div class="sh_top sh_top1">
+                <div class="shelfbooks">
+                    <div class="books_front">
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                        <div class="bookf"></div>
+                    </div>
+                    <div class="books_side"></div>
+                    <div class="books_top"></div>
+                </div>
+            </div>
+            <div class="sh_front"></div>
+            <div class="sh_side"></div>
+            <div class="sh_shadow1"></div>
+            <div class="sh_shadow11"></div>
+        </div>
+        <div class="shelf sh2">
+            <div class="sh_top sh_top2">
+                <div class="shelf_model" id="model">
+                    <div class="shelf_model_front"></div>
+                    <div class="shelf_model_side"></div>
+                    <div class="shelf_model_top">
+                        <div class="shelf_light" id="model_light"></div>
+                        <div class="model_cube" id="cube">
+                            <div class="model_cube_front"></div>
+                            <div class="model_cube_side"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sh_front"></div>
+            <div class="sh_side"></div>
+            <div class="sh_shadow2"></div>
+            <div class="sh_shadow21"></div>
+        </div>
+        <div class="pinkLights">
+            <div class="pinkdots p1"></div>
+            <div class="pinkdots p2"></div>
+            <div class="pinkdots p3"></div>
+            <div class="pinkdots p4"></div>
+            <div class="pinkdots p5"></div>
+            <div class="pinkdots p6"></div>
+            <div class="pinkdots p7"></div>
+            <div class="pinkdots p8"></div>
+            <div class="pinkdots p9"></div>
+            <div class="pinkdots p10"></div>
+            <div class="pinkdots p11"></div>
+            <div class="pinkdots p12"></div>
+            <div class="pinkdots p13"></div>
+            <div class="pinkdots p14"></div>
+            <div class="pinkdots p15"></div>
+            <div class="pinkdots p16"></div>
+            <div class="pinkdots p17"></div>
+            <div class="pinkdots p18"></div>
+            <div class="pinkdots p19"></div>
+            <div class="pinkdots p20"></div>
+            <div class="pinkdots p21"></div>
+            <div class="pinkdots p22"></div>
+            <div class="pinkdots p23"></div>
+            <div class="pinkdots p24"></div>
+            <div class="pinkdots p25"></div>
+            <div class="pinkdots p26"></div>
+            <div class="pinkdots p27"></div>
+            <div class="pinkdots p28"></div>
+            <div class="pinkdots p29"></div>
+        </div>
+        <div class="bluelights">
+            <div class="bluedots b1"></div>
+            <div class="bluedots b2"></div>
+            <div class="bluedots b3"></div>
+            <div class="bluedots b4"></div>
+            <div class="bluedots b5"></div>
+            <div class="bluedots b6"></div>
+            <div class="bluedots b7"></div>
+            <div class="bluedots b8"></div>
+            <div class="bluedots b9"></div>
+            <div class="bluedots b10"></div>
+            <div class="bluedots b11"></div>
+            <div class="bluedots b12"></div>
+            <div class="bluedots b13"></div>
+            <div class="bluedots b14"></div>
+            <div class="bluedots b15"></div>
+            <div class="bluedots b16"></div>
+            <div class="bluedots b17"></div>
+            <div class="bluedots b18"></div>
+            <div class="bluedots b19"></div>
+            <div class="bluedots b20"></div>
+            <div class="bluedots b21"></div>
+            <div class="bluedots b22"></div>
+            <div class="bluedots b23"></div>
+            <div class="bluedots b24"></div>
+        </div>
+        <div class="outside_lights">
+            <div class="out_pink"></div>
+            <div class="out_blue"></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

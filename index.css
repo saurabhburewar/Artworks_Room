@@ -1,0 +1,1738 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Iceland&display=swap");
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    transform-style: preserve-3d;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: radial-gradient(circle, #151321, #000);
+}
+
+/* #subtitles {
+    position: fixed;
+    width: 30vw;
+    height: 3vw;
+    bottom: 2vw;
+    color: #fff;
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.sub_text {
+    position: absolute;
+    font-family: "Exo 2", sans-serif;
+    font-style: bold;
+    text-shadow: 0.1vw 0.1vw 0.2vw #000;
+    opacity: 0;
+    transition-duration: 0.5s;
+} */
+
+.ns_top_light {
+    background: radial-gradient(circle, #dc1974, #dc197437);
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    opacity: 0.7;
+}
+.ns_side_light {
+    background: linear-gradient(to right, #dc1974, #dc197437);
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    opacity: 0.1;
+}
+.ns_front_light {
+    background: linear-gradient(to top, #dc1974, #dc197437);
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    opacity: 0.1;
+}
+.bed_side_light {
+    background: linear-gradient(to bottom, #dc1974, #dc197437);
+    position: absolute;
+    width: 4vw;
+    height: 18.5vw;
+    opacity: 0.5;
+    filter: blur(1vw);
+    transform: translateX(-1vw) translateY(-0.5vw);
+}
+
+.house {
+    border: 1px solid red;
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    transform: perspective(90vw) rotateX(75deg) rotateZ(45deg) translateZ(-5    vw) translateX(10vw) translateY(10vw);
+    box-shadow: 0 0vw 4vw 5vw #000;
+}
+
+.wall1 {
+    position: absolute;
+    width: 30vw;
+    height: 20vw;
+    transform: rotateX(90deg) translateY(10vw) translateZ(10vw); 
+}
+.w1_front {
+    background: linear-gradient(to bottom, #38384e, #4d4d76);
+    position: absolute;
+    width: 30vw;
+    height: 19vw;
+}
+.w1_led {
+    background: linear-gradient(to top, #3417db, transparent);
+    position: absolute;
+    width: 30vw;
+    height: 7vw;
+    transform: translateY(12vw);
+    opacity: 0.7;
+}
+.w1_top {
+    background: #151321; 
+    position: absolute;
+    width: 30vw;
+    height: 2vw;
+    transform: rotateX(90deg) translateZ(-19vw) translateY(1vw); 
+}
+.w1_side {
+    background: #151321; 
+    position: absolute;
+    width: 2vw;
+    height: 20vw;
+    transform: rotateY(90deg) translateX(-1vw) translateZ(29vw); 
+}
+.w1_light {
+    background: #dc1974;
+    position: absolute;
+    width: 18vw;
+    height: 8vw;
+    transform: translateY(2.5vw) translateX(12vw);
+    opacity: 0.7;
+    filter: blur(4vw);
+}
+.w1_light1 {
+    background: #dc1974;
+    position: absolute;
+    width: 5vw;
+    height: 7vw;
+    transform: translateY(8vw) translateX(10vw);
+    opacity: 0.5;
+    filter: blur(3vw);
+}
+#trad_text {
+    position: absolute;
+    width: 15vw;
+    height: 3vw;
+    font-family: "Iceland", cursive;
+    font-size: 3.5vw;
+    font-weight: 900;
+    color: #ffffff2f;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transform: translateX(5.5vw) translateY(15.2vw) rotateX(180deg);
+}
+
+.wall2 {
+    background-color: #000;
+    position: absolute;
+    width: 20vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateX(-10vw) translateZ(-10vw); 
+}
+.w2_front {
+    background: linear-gradient(to bottom, #38384e, #4d4d76);
+    position: absolute;
+    width: 19vw;
+    height: 30vw;
+    transform: translateX(1vw);
+}
+.w2_led {
+    background: linear-gradient(to right, #3417db, transparent);
+    position: absolute;
+    width: 7vw;
+    height: 30vw;
+    transform: translateX(1vw);
+    opacity: 0.7;
+}
+.w2_top {
+    background: #151321; 
+    position: absolute;
+    width: 2vw;
+    height: 32vw;
+    transform: rotateY(90deg) translateX(1vw) translateZ(-1vw) translateY(-2vw); 
+}
+.w2_side {
+    background: #151321; 
+    position: absolute;
+    width: 20vw;
+    height: 2vw;
+    transform: rotateX(90deg) translateY(-1vw) translateZ(-29vw); 
+}
+.w2_light {
+    background: linear-gradient(to right, #19a5dc, transparent);;
+    position: absolute;
+    width: 9vw;
+    height: 13vw;
+    filter: blur(3vw);
+    transform: translateX(6vw) translateY(17vw);
+}
+.w2_light1 {
+    background: linear-gradient(to right, #19a5dc, transparent);;
+    position: absolute;
+    width: 9vw;
+    height: 11vw;
+    filter: blur(3vw);
+    transform: translateX(10vw) translateY(6vw);
+}
+#web_text {
+    position: absolute;
+    width: 20vw;
+    height: 3vw;
+    font-family: "Iceland", cursive;
+    font-size: 3.5vw;
+    font-weight: 900;
+    color: #ffffff2f;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transform: translateX(3vw);
+}
+
+.beam1 {
+    position: absolute;
+    width: 30vw;
+    height: 1vw;
+    transform: rotateX(90deg) translateY(19.5vw) translateZ(0.5vw); 
+}
+.b1_top {
+    background-color: #151321;
+    position: absolute;
+    width: 30vw;
+    height: 1vw;
+    transform: rotateX(90deg) translateY(-0.5vw) translateZ(-0.5vw); 
+}
+.b1_bottom {
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 30vw;
+    height: 1vw;
+    transform: rotateX(90deg) translateY(-0.5vw) translateZ(0.5vw); 
+}
+.b1_side {
+    background-color: #151321;
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    transform: rotateY(90deg) translateX(0.5vw) translateZ(29.5vw); 
+}
+.b1_front {
+    stroke: none;
+    background: linear-gradient(to bottom, #36364d, #151321);
+    position: absolute;
+    width: 30vw;
+    height: 1vw;
+    transform: translateZ(-1vw); 
+}
+
+.beam2 {
+    position: absolute;
+    width: 1vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateX(-19.5vw) translateZ(-0.5vw); 
+}
+.b2_top {
+    background-color: #151321;
+    position: absolute;
+    width: 1vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateX(-0.5vw) translateZ(-0.5vw); 
+}
+.b2_bottom {
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 1vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateX(-0.5vw) translateZ(0.5vw); 
+}
+.b2_side {
+    background-color: #151321;
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    transform: rotateX(90deg) translateY(0.5vw) translateZ(-29.5vw); 
+}
+.b2_front {
+    background: linear-gradient(to left, #36364d, #151321);
+    position: absolute;
+    width: 1vw;
+    height: 30vw;
+    transform: translateZ(1vw); 
+}
+
+.wall3 {
+    background-color: #fff;
+    position: absolute;
+    width: 30vw;
+    height: 2vw;
+    transform: rotateX(90deg) translateY(1vw) translateZ(-29vw); 
+}
+.w3_top {
+    background: linear-gradient(to top, #2c2c4a, #151321);
+    position: absolute;
+    width: 30vw;
+    height: 2vw;
+    transform: rotateX(90deg) translateY(-1vw) translateZ(-1vw);
+}
+.w3_front {
+    background: #151321;
+    position: absolute;
+    width: 30vw;
+    height: 2.1vw;
+    transform: translateZ(-2vw);
+}
+.w3_side {
+    background: #151321;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    transform: rotateY(90deg) translateX(1vw) translateZ(29vw);
+}
+
+.wall4 {
+    background-color: #fff;
+    position: absolute;
+    width: 2vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateX(-1vw) translateZ(29vw); 
+}
+.w4_top {
+    background: linear-gradient(to top,#151321 0%, #2c2c4a 5%, #151321 33%);
+    position: absolute;
+    width: 2vw;
+    height: 32vw;
+    transform: rotateY(90deg) translateX(-1vw) translateZ(-1.03vw);
+}
+.w4_front {
+    background: #151321;
+    position: absolute;
+    width: 2vw;
+    height: 32.01vw;
+    transform: translateZ(2vw) translateX(-0.05vw);
+}
+.w4_side {
+    background: #151321;
+    position: absolute;
+    width: 2.1vw;
+    height: 2.1vw;
+    transform: rotateX(90deg) translateY(1vw) translateZ(-31vw) translateX(-0.1vw);
+}
+
+.floor {
+    background: radial-gradient(circle, #505081, #3d3d67);
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+}
+.floor_shadows1 {
+    background: linear-gradient(to right, #0c0a12, transparent 70%  );
+    position: absolute;
+    width: 3vw;
+    height: 30vw;
+}
+.floor_shadows2 {
+    background: linear-gradient(to bottom, #0c0a12, transparent 70%);
+    position: absolute;
+    width: 30vw;
+    height: 3vw;
+}
+.floor_pink_light {
+    background: linear-gradient(to bottom, #dc1974, transparent 90%);
+    position: absolute;
+    width: 24vw;
+    height: 20vw;
+    transform: translateX(6vw);
+    filter: blur(4vw);
+    opacity: 0.6;
+}
+.floor_blue_light {
+    background: linear-gradient(to right, #19a5dc, transparent 90%);
+    position: absolute;
+    width: 20vw;
+    height: 24vw;
+    transform: translateY(6vw);
+    filter: blur(4vw);
+    opacity: 0.6;
+}
+#threed_text {
+    position: absolute;
+    width: 5vw;
+    height: 3vw;
+    font-family: "Iceland", cursive;
+    font-size: 3.5vw;
+    font-weight: 900;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff2f;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transform: translateX(17vw) translateY(20vw);
+}
+
+.sidetiles1 {
+    position: absolute;
+    width: 30vw;
+    height: 0.6vw;
+    transform: rotateX(90deg) translateY(0.3vw);
+}
+.st1_front {
+    background: #5b5b80;
+    position: absolute;
+    width: 30vw;
+    height: 0.6vw;
+}
+.st1_top {
+    background: #36364d;
+    position: absolute;
+    width: 30vw;
+    height: 0.3vw;
+    transform: rotateX(90deg) translateX(0.1vw) translateZ(-0.5vw);
+}
+.sidetiles2 {
+    position: absolute;
+    width: 0.6vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateX(-0.3vw);
+}
+.st2_front {
+    background: #5b5b80;
+    position: absolute;
+    width: 0.6vw;
+    height: 30vw;
+}
+.st2_top {
+    background: #36364d;
+    position: absolute;
+    width: 0.3vw;
+    height: 30vw;
+    transform: rotateY(90deg) translateY(0.1vw) translateZ(-0.2vw);
+}
+
+.door {
+    background: radial-gradient(circle, #01010e, #050520);
+    position: absolute;
+    width: 7vw;
+    height: 15vw;
+    transform: rotateX(90deg) translateX(3vw) translateY(7.6vw) translateZ(7vw);
+    z-index: 1;
+}
+.door_light {
+    background: linear-gradient(to top, #a0a0d9, transparent);
+    position: absolute;
+    width: 7vw;
+    height: 0.5vw;
+    transform: rotateX(90deg) translateY(-0.15vw) translateZ(0.3vw);
+}
+.door_pink_light {
+    background: linear-gradient(to top left, #dc1974, transparent);
+    position: absolute;
+    width: 7vw;
+    height: 15vw;
+    z-index: 2;
+    opacity: 0.1;
+}
+
+.doorframe {
+    position: absolute;
+    width: 7vw;
+    height: 15vw;
+    transform: rotateX(90deg) translateX(3vw) translateY(7.6vw) translateZ(7vw);
+}
+.door_shadow {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 14.5vw;
+    z-index: 0;
+    filter: blur(1vw);
+}
+.df_left {
+    position: absolute;
+    width: 0.3vw;
+    height: 15vw;
+    transform: translateX(-0.3vw);
+}
+.df_side {
+    background: linear-gradient(to top, #090937, #02021d 30%);
+    position: absolute;
+    width: 0.3vw;
+    height: 15vw;
+    transform: rotateY(90deg) translateZ(0.15vw) translateX(0.15vw);
+}
+.df_side_light {
+    background: linear-gradient(to top, #dc1974, transparent);
+    position: absolute;
+    width: 0.3vw;
+    height: 15vw;
+    opacity: 0.3;
+}
+.df_front {
+    background: linear-gradient(to top, #07072d, #02021d 30%);;
+    position: absolute;
+    width: 0.3vw;
+    height: 15vw;
+    transform: translateZ(-0.3vw);
+}
+.df_front_light {
+    background: linear-gradient(to left, #dc1974, transparent 80%);;
+    position: absolute;
+    width: 0.3vw;
+    height: 10vw;
+    opacity: 0.2;
+    filter: blur(0.1vw);
+    transform: translateY(5vw);
+}
+.df_light {
+    background: linear-gradient(to left, #02021d, #a0a0d9);
+    position: absolute;
+    width: 0.3vw;
+    height: 15vw;
+    transform: rotateY(90deg) translateZ(0.15vw) translateX(0.15vw);
+}
+.df_right {
+    position: absolute;
+    width: 0.3vw;
+    height: 15vw;
+    transform: translateX(7vw);
+}
+.df_top {
+    position: absolute;
+    width: 7.6vw;
+    height: 0.3vw;
+    transform: translateX(-0.3vw) translateY(15vw);
+}
+.df_top_front {
+    background: linear-gradient(to top, #0d0d47, #07072d);
+    position: absolute;
+    width: 7.6vw;
+    height: 0.3vw;
+    transform: translateZ(-0.3vw);
+}
+.df_top_front_light {
+    background: linear-gradient(to left, #dc1974, transparent);
+    position: absolute;
+    width: 7.6vw;
+    height: 0.3vw;
+    opacity: 0.2;
+}
+.df_top_side {
+    background: linear-gradient(to top, #0d0d47, #090937);
+    position: absolute;
+    width: 0.3vw;
+    height: 0.3vw;
+    transform: rotateY(90deg) translateZ(7.45vw) translateX(0.15vw);
+}
+.df_top_side_light {
+    background: #dc1974;
+    position: absolute;
+    width: 0.3vw;
+    height: 0.3vw;
+    opacity: 0.3;
+}
+.df_top_top {
+    background: #14145f;
+    position: absolute;
+    width: 7.6vw;
+    height: 0.3vw;
+    transform: rotateX(90deg) translateZ(-0.15vw) translateY(-0.15vw);
+}
+
+.frame1 {
+    position: absolute;
+    width: 6vw;
+    height: 7vw;
+    transform: rotateX(90deg) translateY(11.7vw) translateX(14vw) translateZ(3.5vw);
+    transition-duration: 0.5s;
+}
+.frame2 {
+    position: absolute;
+    width: 6vw;
+    height: 7vw;
+    transform: rotateX(90deg) translateY(11.7vw) translateX(22vw) translateZ(3.5vw);
+    box-shadow: 0.1vw 0vw 0.7vw 0.2vw #dc1974;
+    transition-duration: 0.5s;
+}
+.f_shadow {
+    background: #000;
+    position: absolute;
+    width: 6vw;
+    height: 7.5vw;
+    transform: translateY(-0.5vw);
+    filter: blur(1vw);
+}
+.f_photo {
+    position: absolute;
+    width: 6vw;
+    height: 7vw;
+    transform: rotateZ(180deg) translateZ(-0.3vw);
+}
+.f_side {
+    background: linear-gradient(to top, #0d0d47, #000);
+    position: absolute;
+    width: 0.3vw;
+    height: 7vw;
+    transform: rotateY(90deg) translateZ(5.85vw) translateX(0.15vw);
+}
+.f_top {
+    background: #14145f;
+    position: absolute;
+    width: 6vw;
+    height: 0.3vw;
+    transform: rotateX(90deg) translateY(-0.15vw) translateZ(-6.83vw);
+}
+.f1_art {
+    background-image: url(images/frame1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.f2_art {
+    background-image: url(images/frame2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.f_overlay {
+    background: #01010e;
+    position: absolute;
+    width: 6vw;
+    height: 7vw;
+    transform: translateZ(-0.3vw);
+    opacity: 0.3;
+}
+.f_light {
+    background: linear-gradient(to bottom, #d83f87, #d83f8667);
+    position: absolute;
+    width: 6vw;
+    height: 7vw;
+    transform: translateZ(-0.3vw);
+    opacity: 0.2;
+}
+#hover_frame:hover {
+    cursor: pointer;
+}
+
+.bed {
+    position: absolute;
+    width: 10vw;
+    height: 18vw;
+    transform: translateX(16vw);
+    box-shadow: 0 1vw 1vw 0.6vw #000;
+}
+.headrest {
+    position: absolute;
+    width: 10vw;
+    height: 7vw;
+    transform: rotateX(90deg) translateY(3.5vw) translateZ(3vw);
+}
+.hr_shadow {
+    background: #000;
+    position: absolute;
+    width: 10vw;
+    height: 6.5vw;
+    filter: blur(1vw);
+}
+.hr_front {
+    background: linear-gradient(to top, #07072d, #02021d);
+    position: absolute;
+    width: 10vw;
+    height: 7vw;
+    transform: translateZ(-0.5vw);
+}
+.hr_front_box {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-repeat: repeat;
+    background-size: 10% 10%;
+    position: absolute;
+    width: 8vw;
+    height: 6vw;
+    transform: translateZ(-0.5vw) translateX(1vw) translateY(0vw);
+}
+.hr_side {
+    background: linear-gradient(to top, #07072d, #02021d 65%);
+    position: absolute;
+    width: 0.5vw;
+    height: 7vw;
+    transform: rotateY(90deg) translateZ(9.75vw) translateX(0.25vw);
+}
+.hr_top {
+    background: linear-gradient(to right, #0d0d47, #07072d, #0d0d47);
+    position: absolute;
+    width: 10vw;
+    height: 0.5vw;
+    transform: rotateX(90deg) translateZ(-6.75vw) translateY(-0.25vw);
+}
+.hr_top_light {
+    background: linear-gradient(to right, #d83f87, #d83f86bd, #d83f87);
+    width: 10vw;
+    height: 0.5vw;
+    opacity: 0.3;
+}
+.hr_side_light {
+    background: linear-gradient(to top, #d83f87, transparent 70%);
+    width: 0.5vw;
+    height: 7vw;
+    opacity: 0.3;
+}
+.hr_front_light {
+    background: linear-gradient(to left, #d83f87, #d83f8667);
+    width: 10vw;
+    height: 7vw;
+    opacity: 0.3;
+}
+.bed_side {
+    background: #02021d;
+    position: absolute;
+    width: 3.1vw;
+    height: 18.1vw;
+    transform: rotateY(90deg) translateX(-1.5vw) translateY(1vw) translateZ(8.5vw);
+}
+.bed_side_box {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-repeat: repeat;
+    background-size: 10% 4%;
+    position: absolute;
+    width: 3.1vw;
+    height: 18.1vw;
+}
+.bed_front {
+    background: #02021d;
+    position: absolute;
+    width: 10.1vw;
+    height: 7vw;
+    transform: rotateX(90deg) translateZ(-15.6vw);
+}
+.bed_front_box {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-repeat: repeat;
+    background-size: 7% 10%;
+    position: absolute;
+    width: 10vw;
+    height: 7vw;
+}
+.bed_front_light {
+    background: #d83f8667;
+    position: absolute;
+    width: 10vw;
+    height: 7vw;
+    opacity: 0.1;
+}
+.bed_top {
+    background: #02021d;
+    position: absolute;
+    width: 10vw;
+    height: 18.05vw;
+    transform: translateZ(3vw) translateY(1vw);
+}
+.bed_mattress {
+    position: absolute;
+    width: 10vw;
+    height: 18.05vw;
+    transform: translateZ(3vw) translateY(1vw);
+}
+.mat_top {
+    background: linear-gradient(to top, #41415a, #34345b);
+    position: absolute;
+    width: 10vw;
+    height: 18.05vw;
+    border-radius: 0.2vw;
+    transform: translateZ(1vw);
+}
+.mat_top_light {
+    background: linear-gradient(to bottom left, #d83f87, #d83f8667);
+    position: absolute;
+    width: 10vw;
+    height: 18.05vw;
+    opacity: 0.3;
+    border-radius: 0.2vw;
+}
+.mat_front {
+    background: #2b2b43;
+    position: absolute;
+    width: 10vw;
+    height: 1vw;
+    border-top-left-radius: 0.2vw;
+    border-top-right-radius: 0vw;
+    border-bottom-left-radius: 0.2vw;
+    transform: rotateX(90deg) translateY(0.5vw) translateZ(-17.5vw);
+}
+.mat_side {
+    background: #2b2b43;
+    position: absolute;
+    width: 1vw;
+    height: 18vw;
+    border-top-right-radius: 0.2vw;
+    border-top-left-radius: 0.2vw;
+    transform: rotateY(90deg) translateZ(9.5vw) translateX(-0.5vw);
+}
+.mat_top svg {
+    position: absolute;
+    width: 10vw;
+    height: 7vw;
+    box-shadow: 0vw 0.3vw 0.1vw 0.1vw #000;
+    transform: translateY(5vw);
+    filter: blur(0.2vw);
+}
+#digi_text {
+    position: absolute;
+    width: 15vw;
+    height: 3vw;
+    font-family: "Iceland", cursive;
+    font-size: 5vw;
+    font-weight: 900;
+    color: #ffffff2f;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transform: translateX(-1vw) translateY(5vw) rotateZ(-90deg);
+}
+
+.tablet {
+    position: absolute;
+    width: 1.5vw;
+    height: 3vw;
+    transform: translateZ(4vw)translateX(2vw) translateY(15vw) rotateZ(-30deg);
+    border-radius: 0.15vw;
+    box-shadow: 0 0 0.05vw 0.05vw #000;
+}
+.tablet:hover {
+    cursor: pointer;
+}
+.tab_back {
+    background: black;
+    position: absolute;
+    width: 1.5vw;
+    height: 3vw;
+    border-radius: 0.15vw;
+}
+.tab_front {
+    background: black;
+    position: absolute;
+    width: 1.5vw;
+    height: 3vw;
+    border-radius: 0.15vw;
+    transform: translateZ(0.1vw);
+}
+.tab_screen {
+    background: #fff;
+    position: absolute;
+    width: 1.3vw;
+    height: 2.7vw;
+    border-radius: 0.15vw;
+    transform: translateX(0.1vw) translateY(0.1vw);
+}
+.tab_screen_on {
+    background: url(./images/tab.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#tab_light1 {
+    background: #fff;
+    position: absolute;
+    width: 1.3vw;
+    height: 2.7vw;
+    opacity: 0;
+    filter: blur(2vw);
+    transition-duration: 0.5s;
+}
+.tab_wire1 {
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    border-radius: 50%;
+    border-top: 0.2vw solid #000;
+    transform: translateX(1vw) translateY(-1vw);
+}
+.tab_wire2 {
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    border-radius: 20%;
+    border-right: 0.1vw solid #000;
+    transform: translateX(1vw) translateY(-0.4vw);
+}
+.tab_wire3 {
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    border-radius: 50%;
+    border-bottom: 0.2vw solid #000;
+    transform: translateX(2.7vw) translateY(1.5vw) rotateZ(50deg);
+}
+.tab_wire4 {
+    background: #000;
+    position: absolute;
+    width: 0.2vw;
+    height: 0.2vw;
+    border-radius: 0.1vw; 
+    transform: translateX(4vw) translateY(3.8vw);
+}
+
+.night_stand {
+    background: #000;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    transform: translateX(26.5vw) translateY(0.5vw);
+    box-shadow: 0 1vw 1vw 0.6vw #000;
+}
+.ns_front {
+    border: 0.1vw solid #000;
+    background: linear-gradient(to top, #02021d, #000);
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    transform: rotateX(90deg) translateY(1.5vw) translateZ(-1.5vw);
+}
+.ns_side {
+    background: linear-gradient(to right, #02021d, #000);
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    transform: rotateY(90deg) translateX(-1.5vw) translateZ(1.5vw);
+}
+.ns_top {
+    background: linear-gradient(to top, #02021d, #050544);
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    transform: translateZ(3vw);
+}
+.ns_drawer {
+    background: #000;
+    position: absolute;
+    width: 2.9vw;
+    height: 0.05vw;
+    transform: translateY(2vw);
+}
+
+.table_area {
+    background: #010008ee;
+    position: absolute;
+    width: 7vw;
+    height: 12vw;
+    transform: translateY(18vw);
+    box-shadow: 2vw 0.3vw 1vw 1vw #010008ee;
+}
+.table_top {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 12vw;
+    transform: translateZ(5vw);
+}
+.table_top_top {
+    background: #02021d;
+    position: absolute;
+    width: 7vw;
+    height: 12vw;
+    transform: translateZ(0.2vw);
+}
+.table_light {
+    background:linear-gradient(to right, #3417db, transparent);
+    position: absolute;
+    width: 7vw;
+    height: 12vw;
+    opacity: 0.5;
+}
+.table_blue_light {
+    background:linear-gradient(to right, #19a5dc, transparent);
+    position: absolute;
+    width: 7vw;
+    height: 12vw;
+    opacity: 0.5;
+}
+.table_blue_light1 {
+    background:linear-gradient(to top right, #19a5dc, transparent);
+    position: absolute;
+    width: 7vw;
+    height: 12vw;
+    opacity: 0.3;
+}
+
+.table_top_side {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 0.2vw;
+    transform: rotateX(90deg) translateZ(-11.9vw) translateY(0.1vw);
+}
+.table_top_front {
+    background: #02021d;
+    position: absolute;
+    width: 0.2vw;
+    height: 12vw;
+    transform: rotateY(90deg) translateZ(6.85vw) translateX(-0.1vw);
+}
+
+.table_leg {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 1vw;
+    box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw #000;
+}
+.table_shadow {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 5vw;
+    transform: translateY(6vw);
+    filter: blur(0.7vw);
+}
+.table_shadow::after {
+    content: "";
+    background: #000;
+    position: absolute;
+    width: 1vw;
+    height: 5vw;
+    transform: translateX(4vw) translateY(-4vw);
+    box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw #000;
+}
+.table_shadow1 {
+    background: linear-gradient(to right, #000, #000000a0);
+    position: absolute;
+    width: 7vw;
+    height: 13vw;
+    transform: rotateY(90deg) translateX(-1.5vw) translateZ(-3vw);
+    filter: blur(1vw);
+}
+
+.tl_stand_top_left {
+    background: linear-gradient(to right, #000 70%, #02021d);
+    position: absolute;
+    width: 7vw;
+    height: 1vw;
+    transform: translateZ(0.2vw);
+}
+.tl_stand_top_right {
+    background: linear-gradient(to top, #000, #02021d);
+    position: absolute;
+    width: 7vw;
+    height: 1vw;
+    transform: translateZ(0.2vw);
+}
+.tl_stand_side_left {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 0.2vw;
+    transform: rotateX(90deg) translateY(0.1vw) translateZ(-0.9vw);
+}
+.tl_stand_side_right {
+    background: #000;
+    position: absolute;
+    width: 7vw;
+    height: 0.2vw;
+    transform: rotateX(90deg) translateY(0.1vw) translateZ(-0.9vw);
+}
+.tl_stand_front_left {
+    background: #02021d;
+    position: absolute;
+    width: 0.2vw;
+    height: 1vw;
+    transform: rotateY(90deg) translateX(-0.1vw) translateZ(6.85vw);
+}
+.tl_stand_front_right {
+    background: #02021d;
+    position: absolute;
+    width: 0.2vw;
+    height: 1vw;
+    transform: rotateY(90deg) translateX(-0.1vw) translateZ(6.85vw);
+}
+.tl_stand_up {
+    transform: translateZ(4.8vw);
+}
+.tl_left {
+    transform: translateY(10vw);
+}
+.tl_right {
+    transform: translateY(1vw);
+}
+.tl_stand_vert {
+    position: absolute;
+    width: 1vw;
+    height: 5vw;
+    transform: rotateX(90deg) translateX(3vw) translateY(2vw) translateZ(2vw);
+}
+.tl_stand_vert_front_left {
+    background: #000;
+    position: absolute;
+    width: 1vw;
+    height: 5vw;
+    transform: translateZ(-0.1vw);
+}
+.tl_stand_vert_front_right {
+    background: #000;
+    position: absolute;
+    width: 1vw;
+    height: 5vw;
+    transform: translateZ(-0.1vw);
+}
+.tl_stand_vert_side_left {
+    background: #000;
+    position: absolute;
+    width: 0.2vw;
+    height: 5vw;
+    transform: rotateY(90deg) translateZ(0.8vw);
+}
+.tl_stand_vert_side_right {
+    background: linear-gradient(to top, #000, #02021d);;
+    position: absolute;
+    width: 0.2vw;
+    height: 5vw;
+    transform: rotateY(90deg) translateZ(0.8vw);
+}
+
+.moniter_area {
+    position: absolute;
+    width: 3vw;
+    height: 5vw;
+    transform: translateY(6vw) translateX(1vw) rotateZ(-15deg);
+}
+.moniter_shadow {
+    background: linear-gradient(to right, #000 50%, transparent);
+    position: absolute;
+    width: 3vw;
+    height: 5vw;
+    transform: translateX(1.1vw);
+    opacity: 0.5;
+    filter: blur(0.2vw);
+}
+.moniter_body {
+    background: #000;
+    position: absolute;
+    width: 3vw;
+    height: 5vw;
+    transform: rotateY(90deg) translateX(-2.5vw);
+}
+.mb_top {
+    background: linear-gradient(to top, #30307b, #191947);
+    position: absolute;
+    width: 0.1vw;
+    height: 5vw;
+    transform: rotateY(90deg) translateX(0.05vw) translateZ(-0.05vw);
+}
+.mb_side {
+    background: #191947;
+    position: absolute;
+    width: 3vw;
+    height: 0.1vw;
+    transform: rotateX(90deg) translateY(-0.05vw) translateZ(-4.95vw);
+}
+.mb_front {
+    background: #0a0a1d;
+    position: absolute;
+    width: 0.5vw;
+    height: 5vw;
+    transform: translateX(2.5vw);
+}
+.mb_display {
+    background: url(./images/monitor.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 2.5vw;
+    height: 5vw;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+.ms_vert {
+    background: #0a0a1d;
+    position: absolute;
+    width: 2vw;
+    height: 1vw;
+    transform: rotateY(90deg) translateY(2vw) translateX(-1vw);
+}
+.ms_vert_side {
+    background: #191947;
+    position: absolute;
+    width: 2vw;
+    height: 0.1vw;
+    transform: rotateX(90deg) translateZ(-1vw);
+}
+.ms_base {
+    background: #000;
+    position: absolute;
+    width: 1.5vw;
+    height: 3vw;
+    transform: translateX(0.5vw) translateY(1vw);
+}
+.ms_base_top {
+    background: linear-gradient(to top left, #191947 60%, #0a0a1d);;
+    position: absolute;
+    width: 1.5vw;
+    height: 3vw;
+    transform: translateZ(0.1vw);
+}
+.ms_base_top_light {
+    background: linear-gradient(to top right, #19a5dc, transparent);;
+    position: absolute;
+    width: 1.5vw;
+    height: 3vw;
+    opacity: 0.6;
+}
+.ms_base_side {
+    
+    background: linear-gradient(to right, #191947, #0a0a1d 40%);
+    position: absolute;
+    width: 1.5vw;
+    height: 0.1vw;
+    transform: rotateX(90deg) translateY(0.05vw) translateZ(-3vw);
+}
+.ms_base_front {
+    background: #0a0a1d;
+    position: absolute;
+    width: 0.1vw;
+    height: 3vw;
+    transform: rotateY(90deg) translateX(-0.05vw) translateZ(1.45vw);
+}
+.ms_base_shadow {
+    background: linear-gradient(to right, #000 60%, transparent);
+    position: absolute;
+    width: 2vw;
+    height: 3.5vw;
+    transform: translateZ(0.1vw) translateX(0.5vw);
+    opacity: 0.5;
+    filter: blur(0.2vw);
+}
+
+.laptop_area {
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    transform: translateX(2vw) translateY(2vw) rotateZ(30deg);
+    box-shadow: 0.2vw -0.2vw 0.5vw 0.1vw #000000bb;
+}
+.lap_shadow {
+    background: #000;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    transform: translateX(0.5vw) translateY(-1vw);
+    filter: blur(0.5vw);
+    opacity: 0.5;
+}
+.lap_base {
+    background: #000;
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+}
+.lb_top {
+    background: linear-gradient(to top, #46467e, #232346);
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    transform: translateZ(0.1vw);
+}
+.lb_keyboard {
+    background: #000;
+    position: absolute;
+    width: 1vw;
+    height: 2.8vw;
+    border-radius: 0.1vw;
+    transform: translateY(0.1vw) translateX(0.3vw);
+}
+.lb_light {
+    background: linear-gradient(to top, #19a5dc, transparent);
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    opacity: 0.4;
+}
+.lb_side {
+    background: #46467e;
+    position: absolute;
+    width: 2vw;
+    height: 0.1vw;
+    transform: rotateX(90deg) translateZ(-2.97vw) translateY(0.05vw);
+}
+.lb_front {
+    background: #1c1c38;
+    position: absolute;
+    width: 0.1vw;
+    height: 3vw;
+    transform: rotateY(90deg) translateZ(1.9vw) translateX(-0.05vw);
+}
+.lap_lid {
+    background: #000;
+    position: absolute;
+    width: 1.9vw;
+    height: 3vw;
+    transform: rotateY(90deg) translateX(-1vw) translateZ(-1vw) rotateY(-40deg) translateY(0.05vw);
+}
+.ll_hinge_1 {
+    background: #232346;
+    position: absolute;
+    width: 0.1vw;
+    height: 0.2vw;
+    transform: translateX(1.85vw);
+}
+.ll_hinge_2 {
+    background: #46467e;
+    position: absolute;
+    width: 0.1vw;
+    height: 0.2vw;
+    transform: translateX(1.85vw) translateY(2.8vw);
+}
+.ll_display {
+    background: #000;
+    position: absolute;
+    width: 1.5vw;
+    height: 2.8vw;
+    transform: translateX(0.1vw) translateY(0.1vw);
+}
+#laptop_screen {
+    background: url(./images/monitor.png);
+    background-size: cover;
+}
+#ll_light1 {
+    background: #fff;
+    position: absolute;
+    width: 1.6vw;
+    height: 2.8vw;
+    opacity: 0;
+    filter: blur(2vw);
+    transition-duration: 0.5s;
+}
+#monitor:hover {
+    cursor: pointer;
+}
+#laptop:hover {
+    cursor: pointer;
+}
+
+.shelf {
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+}
+.sh1 {
+    transform: translateY(19vw) translateZ(14vw);
+}
+.sh2 {
+    transform: translateY(7vw) translateZ(10vw);
+}
+.sh_top {
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+    transform: translateZ(0.2vw);
+}
+.sh_top1 {
+    background: linear-gradient(to right, #0f0fa5, #02021d);
+}
+.sh_top2 {
+    background: linear-gradient(to right, #0a0a71, #02021d);
+}
+.shelfbooks {
+    background: #000;
+    position: absolute;
+    width: 2vw;
+    height: 7vw;
+    transform: translateY(1vw);
+}
+.books_front {
+    background: linear-gradient(to right, #0f0fa5, #02021d);;
+    position: absolute;
+    width: 2vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(90deg) translateX(-1vw) translateZ(1vw);
+}
+.books_side {
+    background: linear-gradient(to top, #0f0fa5, #02021d);
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    transform: rotateX(90deg) translateY(1vw) translateZ(-5.9vw);
+}
+.books_top {
+    border: 0.2vw solid #000;
+    background: linear-gradient(to right, #1212bc, #0f0fa5);
+    position: absolute;
+    width: 2vw;
+    height: 7vw;
+    transform: translateZ(2vw);
+}
+.bookf {
+    border: 0.1vw solid #000;
+    width: 2vw;
+    height: 0.5vw;
+}
+
+.shelf_model {
+    background: #000;
+    position: absolute;
+    width: 2vw;
+    height: 6vw;
+    transform: translateY(2vw);
+}
+.shelf_model:hover {
+    cursor: pointer;
+}
+.shelf_model_front {
+    background: linear-gradient(to right, #0f0fa5, #02021d);;
+    position: absolute;
+    width: 1vw;
+    height: 6vw;
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(90deg) translateX(-0.5vw) translateZ(1.5vw);
+}
+.shelf_model_side {
+    background: linear-gradient(to top, #0f0fa5, #02021d);
+    position: absolute;
+    width: 2vw;
+    height: 1vw;
+    transform: rotateX(90deg) translateY(0.5vw) translateZ(-5.4vw);
+}
+.shelf_model_top {
+    background: #02021d;
+    position: absolute;
+    width: 2vw;
+    height: 5.8vw;
+    transform: translateZ(0.8vw);
+}
+.shelf_light {
+    background: #fff;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    transform: rotateY(90deg) translateY(2vw);
+    filter: blur(2vw);
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+.model_cube {
+    background: linear-gradient(to top, #9cb1d4, #fff);
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    opacity: 0;
+    transition-duration: 0.2s;
+    transform: translateY(3vw) translateX(0.5vw) translateZ(1vw) rotateX(45deg);
+}
+.model_cube_front {
+    background: linear-gradient(to top right, #0f0fa52d, #9cb1d4, #fff);
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    transform: rotateY(90deg) translateX(-0.5vw) translateZ(0.49vw);
+}
+.model_cube_side {
+    background: linear-gradient(to bottom, #9cb1d4, #0f0fa52d);
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    transform: rotateX(90deg) translateZ(-0.5vw) translateY(0.5vw);
+}
+
+.sh_side {
+    background: linear-gradient(to right, #050544, #02021d);
+    position: absolute;
+    width: 3vw;
+    height: 0.2vw;
+    transform: rotateX(90deg) translateY(0.1vw) translateZ(-9.9vw);
+}
+.sh_front {
+    background: #02021d;
+    position: absolute;
+    width: 0.2vw;
+    height: 10vw;
+    transform: rotateY(90deg) translateZ(2.9vw) translateX(-0.1vw);
+}
+.sh_shadow1 {
+    background: #010008a3;
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+    transform: translateZ(-8.8vw) translateX(-1vw);
+    filter: blur(1vw);
+}
+.sh_shadow11 {
+    background: linear-gradient(to right, #010008a3, transparent);
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+    transform: rotateY(90deg) translateZ(-1.5vw) translateX(1.5vw);
+    filter: blur(1vw);
+}
+.sh_shadow2 {
+    background: #0100087e;
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+    transform: translateZ(-10vw);
+    filter: blur(1vw);
+}
+.sh_shadow21 {
+    background: linear-gradient(to right, #010008a3, transparent);
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+    transform: rotateY(90deg) translateZ(-1.5vw) translateX(1.5vw);
+    filter: blur(1vw);
+}
+
+.pinkdots {
+    background: radial-gradient(circle, #fff, #de81ad 20%, #dc1974 70%);
+    position: absolute;
+    width: 0.2vw;
+    height: 0.2vw;
+    border-radius: 50%;
+    filter: blur(0.02vw);
+}
+.pinkdots::after {
+    content: "";
+    background: #dc1974;
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    opacity: 0.2;
+    border-radius: 50%;
+    filter: blur(0.1vw);
+    transform: translateX(-0.4vw) translateY(-0.4vw);
+}
+.pinkdots::before {
+    content: "";
+    background: #dc1974;
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    opacity: 0.2;
+    border-radius: 50%;
+    filter: blur(0.3vw);
+    transform: translateX(-0.4vw) translateY(-0.4vw);
+}
+
+.p1 {
+    transform: translateZ(4vw) translateX(28vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p2 {
+    transform: translateZ(4.3vw) translateX(28.2vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p3 {
+    transform: translateZ(3.5vw) translateX(28vw) translateY(1vw) rotateX(90deg) rotateY(-30deg);
+}
+.p4 {
+    transform: translateZ(3.5vw) translateX(28vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p5 {
+    transform: translateZ(3.5vw) translateX(27.3vw) translateY(1.6vw) rotateX(90deg) rotateY(-30deg);
+}
+.p6 {
+    transform: translateZ(3.5vw) translateX(28.5vw) translateY(1.8vw) rotateX(90deg) rotateY(-30deg);
+}
+.p7 {
+    transform: translateZ(5vw) translateX(28vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p8 {
+    transform: translateZ(6vw) translateX(27.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p9 {
+    transform: translateZ(7vw) translateX(27.3vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p10 {
+    transform: translateZ(8vw) translateX(27.3vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p11 {
+    transform: translateZ(8.6vw) translateX(27.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p12 {
+    transform: translateZ(8.2vw) translateX(26vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p13 {
+    transform: translateZ(8vw) translateX(25vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p14 {
+    transform: translateZ(8.3vw) translateX(24vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p15 {
+    transform: translateZ(8.6vw) translateX(23.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p16 {
+    transform: translateZ(8.2vw) translateX(22.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p17 {
+    transform: translateZ(8.6vw) translateX(21vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p18 {
+    transform: translateZ(8.3vw) translateX(19.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p19 {
+    transform: translateZ(8vw) translateX(18vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p20 {
+    transform: translateZ(8.2vw) translateX(17vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p21 {
+    transform: translateZ(8.6vw) translateX(16.3vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p22 {
+    transform: translateZ(8.2vw) translateX(15.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p23 {
+    transform: translateZ(8.8vw) translateX(14.5vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p24 {
+    transform: translateZ(9.5vw) translateX(14vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p25 {
+    transform: translateZ(11.5vw) translateX(13vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p26 {
+    transform: translateZ(13vw) translateX(12.3vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p27 {
+    transform: translateZ(14vw) translateX(12vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+.p28 {
+    transform: translateZ(15.5vw) translateX(11.7vw) translateY(2vw) rotateX(90deg) rotateY(-30deg);
+}
+
+.bluedots {
+    background: radial-gradient(circle, #fff, #81bede 20%, #19a5dc 70%);
+    position: absolute;
+    width: 0.2vw;
+    height: 0.2vw;
+    border-radius: 50%;
+    filter: blur(0.02vw);
+}
+.bluedots::after {
+    content: "";
+    background: #19a5dc;
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    opacity: 0.2;
+    border-radius: 50%;
+    filter: blur(0.1vw);
+    transform: translateX(-0.4vw) translateY(-0.4vw);
+}
+.bluedots::before {
+    content: "";
+    background: #19a5dc;
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    opacity: 0.2;
+    border-radius: 50%;
+    filter: blur(0.3vw);
+    transform: translateX(-0.4vw) translateY(-0.4vw);
+}
+
+.b1 {
+    transform: translateZ(14vw) translateX(3vw) translateY(28vw) rotateX(90deg) rotateY(-45deg);
+}
+.b2 {
+    transform: translateZ(13.5vw) translateX(3vw) translateY(27vw) rotateX(90deg) rotateY(-45deg);
+}
+.b3 {
+    transform: translateZ(13vw) translateX(3vw) translateY(25vw) rotateX(90deg) rotateY(-45deg);
+}
+.b4 {
+    transform: translateZ(13.5vw) translateX(3vw) translateY(24vw) rotateX(90deg) rotateY(-45deg);
+}
+.b5 {
+    transform: translateZ(13vw) translateX(3vw) translateY(22.5vw) rotateX(90deg) rotateY(-45deg);
+}
+.b6 {
+    transform: translateZ(13.5vw) translateX(3vw) translateY(21.5vw) rotateX(90deg) rotateY(-45deg);
+}
+.b7 {
+    transform: translateZ(14vw) translateX(3vw) translateY(21vw) rotateX(90deg) rotateY(-45deg);
+}
+.b8 {
+    transform: translateZ(12.5vw) translateX(3vw) translateY(20vw) rotateX(90deg) rotateY(-45deg);
+}
+.b9 {
+    transform: translateZ(12vw) translateX(3vw) translateY(19.8vw) rotateX(90deg) rotateY(-45deg);
+}
+.b10 {
+    transform: translateZ(10.5vw) translateX(3vw) translateY(19vw) rotateX(90deg) rotateY(-45deg);
+}
+.b11 {
+    transform: translateZ(9.5vw) translateX(3vw) translateY(18vw) rotateX(90deg) rotateY(-45deg);
+}
+.b12 {
+    transform: translateZ(8.8vw) translateX(3vw) translateY(16.5vw) rotateX(90deg) rotateY(-45deg);
+}
+.b13 {
+    transform: translateZ(9vw) translateX(3vw) translateY(15vw) rotateX(90deg) rotateY(-45deg);
+}
+.b14 {
+    transform: translateZ(10vw) translateX(3vw) translateY(14vw) rotateX(90deg) rotateY(-45deg);
+}
+.b15 {
+    transform: translateZ(9vw) translateX(3vw) translateY(12vw) rotateX(90deg) rotateY(-45deg);
+}
+.b16 {
+    transform: translateZ(8.7vw) translateX(3vw) translateY(10.5vw) rotateX(90deg) rotateY(-45deg);
+}
+.b17 {
+    transform: translateZ(9.2vw) translateX(3vw) translateY(9vw) rotateX(90deg) rotateY(-45deg);
+}
+.b18 {
+    transform: translateZ(10vw) translateX(3vw) translateY(8vw) rotateX(90deg) rotateY(-45deg);
+}
+.b19 {
+    transform: translateZ(13.5vw) translateX(2.5vw) translateY(28.7vw) rotateX(90deg) rotateY(-45deg);
+}
+.b20 {
+    transform: translateZ(12vw) translateX(2.5vw) translateY(29vw) rotateX(90deg) rotateY(-45deg);
+}
+.b21 {
+    transform: translateZ(10vw) translateX(2.5vw) translateY(29.4vw) rotateX(90deg) rotateY(-45deg);
+}
+.b22 {
+    transform: translateZ(8.5vw) translateX(2.5vw) translateY(29.7vw) rotateX(90deg) rotateY(-45deg);
+}
+.b23 {
+    transform: translateZ(7.5vw) translateX(2.5vw) translateY(30vw) rotateX(90deg) rotateY(-45deg);
+}
+.b24 {
+    transform: translateZ(6vw) translateX(2.5vw) translateY(31vw) rotateX(90deg) rotateY(-45deg);
+}
+
+.out_blue {
+    background: linear-gradient(to bottom, #19a5dc, transparent);
+    position: absolute;
+    width: 5vw;
+    height: 15vw;
+    transform: translateY(30vw) translateX(15vw);
+    filter: blur(5vw);
+}
+.out_pink {
+    background: linear-gradient(to right, #dc1974, transparent);
+    position: absolute;
+    width: 15vw;
+    height: 5vw;
+    transform: translateY(15vw) translateX(30vw);
+    filter: blur(5vw);
+}
